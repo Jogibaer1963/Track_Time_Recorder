@@ -1,0 +1,144 @@
+
+
+<template name="mainLayout">
+ <div >
+    {{#if currentUser}}
+      <div>
+         <a class="btn logout" href="/login" >Logout</a>
+         <a class="editButton" href="/editMachine">Overview processed Machines</a>
+      </div>
+        <div class="headers">
+            <h1>Build Time Recorder</h1>
+        </div>
+        <br><br><br><br><br>
+    <div>
+        {{> machineStart}}
+    </div>
+    {{else}}
+        {{> login}}
+    {{/if}}
+ </div>
+</template>
+
+<template name="machineStart">
+    <form class="submitGreen">
+        <input type="text" class="machineId" id="machineId" placeholder="Enter Machine Number" pattern="C7[7-9]00[0-9]{3}" title="Use Format C7(7-9)00xxx" required>
+       <div>
+           <label for="workCenter" class="workCenter submitGreen">Work Center</label>
+        <select name="workCenter" id="workCenter" class="workCenter" >
+      <!--      <optgroup label="Rotor">
+                <option>L4PRTR10</option>
+                <option>L4PRTR20</option>
+            </optgroup>
+            <optgroup label="Cleaning Shoe" class="inActiveButton">
+                <option>L4PCLN10</option>
+                <option>L4PCLN20</option>
+                <option>L4PCLN30</option>
+            </optgroup>
+            <optgroup label="Axle">
+                <option>L4PAXL10</option>
+            </optgroup>
+            <optgroup label="Ladder">
+                <option>L4PLDR10</option>
+            </optgroup>
+            <optgroup label="Threshing Unit">
+                <option>L4PTHR10</option>
+            </optgroup>  -->
+            <optgroup label="L4MSB">
+       <!--         <option>L4MSB010</option>
+                <option>L4MSB020</option>
+                <option>L4MSB030</option> -->
+                <option>L4MSB040</option>
+        <!--        <option>L4MSB050</option>
+                <option>L4MSB060</option>
+                <option>L4MSB070</option>
+                <option>L4MSB080</option>
+                <option>L4MSB090</option>
+                <option>L4MSB100</option>
+                <option>L4MSB110</option>
+                <option>L4MSB120</option>
+                <option>L4MSB130</option>
+                <option>L4MSB140</option>
+                <option>L4MSB150</option>
+                <option>L4MSB160</option>
+                <option>L4MSB170</option>
+                <option>L4MSB180</option>
+                <option>L4MSB190</option>
+                <option>L4MSB200</option>  -->
+            </optgroup>
+      <!--      <optgroup label="Grain Tank">
+                <option>L4PGRT10</option>
+            </optgroup>
+            <optgroup label="Hydraulic Tree">
+                <option>L4PHYD10</option>
+            </optgroup>
+            <optgroup label="Elevator">
+                <option>L4PELV10</option>
+            </optgroup>
+            <optgroup label="Cab">
+                <option>L4PCAB10</option>
+                <option>L4PCAB20</option>
+            </optgroup>
+            <optgroup label="Chopper">
+                <option>L4PCHP10</option>
+            </optgroup>
+            <optgroup label="Feeder House">
+                <option>L4PFDR10</option>
+            </optgroup>
+            <optgroup label="Cooling Box">
+                <option>L4PCOL10</option>
+                <option>L4PCOL20</option>
+                <option>L4PCOL20</option>
+            </optgroup>
+            <optgroup label="Engine">
+                <option>L4PENG10</option>
+                <option>L4PENG20</option>
+                <option>L4PENG30</option>
+                <option>L4PENG40</option>
+            </optgroup>
+            <optgroup label="Lub System">
+                <option>L4PLUB20</option>
+            </optgroup>
+            <optgroup label="Reconfig">
+                <option>L4MSB910</option>
+                <option>L4MSB930</option>
+                <option>L4MSB970</option>
+            </optgroup> -->
+        </select>
+        </div>
+        <br><br><br><br>
+        <button type="submit" class="submitGreen">Submit</button>
+    </form>
+</template>
+
+
+<template name="login">
+    <form class="orangeredBox">
+        <div class="userBox">
+            <label for="loginUser" class="userLoginText">User Name</label>
+            <br>
+            <div class="userBox">
+                <input type="text" name="loginUser" id="loginUser" placeholder="User Name">
+            </div>
+        </div>
+        <div class="passwordBox">
+            <label for="password" class="userPassword">Password</label>
+            <div class="userPassword">
+                <input type="password" name="loginPassword" id="password" placeholder="Password">
+            </div>
+        </div>
+        <div>
+            <input type="submit" class="loginSubmit" value="Login">
+        </div>
+    </form>
+</template>
+
+<template name="register">
+</template>
+
+<template name="highChart">
+    <div id="container-column" class="chart"></div>
+
+</template>
+
+

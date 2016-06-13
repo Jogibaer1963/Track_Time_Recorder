@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2617d3e2-16ea-4f12-938e-65513620b69f" name="Server Loft" url="http://209.126.98.89">
+        <fileTransfer host="209.126.98.89" port="22" rootFolder="/home/meteor/Projekte/track_time_recorder" accessType="SFTP" password="dfd9df92dfdfdfc7dfccdfdedfc5dfcddff5df99df9edffedfebdf9b" username="meteor">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

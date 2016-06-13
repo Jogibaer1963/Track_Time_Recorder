@@ -1,0 +1,547 @@
+/* CSS declarations go here */
+.body {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    overflow: auto;
+}
+
+.btn {
+    background: #d9d934;
+    background-image: -webkit-linear-gradient(top, #d9d934, #fab237);
+    background-image: -o-linear-gradient(top, #d9d934, #fab237);
+    background-image: linear-gradient(to bottom, #d9d934, #fab237);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #0a0a09;
+    font-size: 20px;
+    padding: 5px 10px 8px 10px;
+    border: solid #080808 2px;
+    text-decoration: none;
+}
+
+.buttonSubmit {
+    float: left;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: #ff4014;
+    padding: 15px;
+    margin-left: 0.25em;
+    margin-top: 4em;
+    text-decoration: none;
+}
+
+.buttonReturn {
+    float: right;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: #ff4014;
+    padding: 15px;
+    margin-left: 0.25em;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.buttonEdit {
+    float: right;
+    font-weight: bolder;
+    background-color: #ff4014;
+    padding: 10px;
+    margin-top: -8em;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.chart {
+    float: left;
+    padding: 25px;
+    width: 1200px;
+    height: 600px;
+}
+
+.counterTime {
+    float: left;
+    width: 140px;
+    height: 50px;
+    margin-left: 5em;
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: #0ddc1b;
+    padding: 20px;
+}
+
+.counterTime_2 {
+    float: left;
+
+    margin-left: 5em;
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: #bb0e21;
+    padding: 20px;
+}
+
+.editButton {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #0ddc1b;
+}
+
+.editDataButton {
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    background-color: #0ddc1b;
+}
+
+.deleteButton {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #fab237;
+}
+
+.fieldSize {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.headers {
+    float: left;
+    margin-left: 2em;
+    overflow: auto;
+}
+
+.inputEdit {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 10px;
+}
+
+.issueFoundButton, #backButton {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color: #ff1213;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 3em;
+}
+
+.issueSolvedButton {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color: greenyellow;
+    padding: 15px;
+    margin-left: 3em;
+    margin-top: 50px;
+}
+
+.issueCheckBox {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 3em;
+}
+
+.issueReasonButton {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #ff1213;
+}
+
+.issueReasonButton:hover {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #469eff;
+}
+
+.issueReasonButton:focus {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #469eff;
+}
+
+
+
+#workCenter {
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+#processStartString {
+    margin-left: 125px;
+}
+
+#processDuration {
+
+}
+
+#downTime {
+    margin-left: 60px;
+}
+
+#issueCount {
+    margin-left: 90px;
+}
+
+.machineId {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.workCenter {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.renderBox {
+    position: absolute;
+    width: 50em;
+    height: 100%;
+}
+
+.selected {
+    background-color: #ff911b;
+}
+
+.submitRed {
+    background-color: #ff1213;
+    float: left;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 15px;
+    margin-left: 3em;
+    margin-top: 0;
+}
+
+.submitIssue {
+    position: relative;
+    left: 20em;
+    top: -17em;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: #ff8063;
+    padding: 15px;
+
+}
+
+.submitGreen {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color: #0ddc1b;
+    padding: 15px;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.startProcessButton {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color: greenyellow;
+    padding: 15px;
+    margin-left: 3em;
+    margin-top: 0;
+}
+
+.stopProcessButton {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color: greenyellow;
+    padding: 15px;
+    margin-left: 3em;
+    margin-top: 0;
+}
+
+.tableTime {
+    width: 50px;
+}
+
+#group1 {
+    float: left;
+    margin-left: 14px;
+    margin-right: 10px;
+}
+
+#group2 {
+    float: left;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+#group3 {
+    float: left;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.loginSubmit {
+    float: left;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: greenyellow;
+    padding: 15px;
+    margin-left: 3em;
+    margin-top: 0;
+}
+
+.login {
+    font-weight: bolder;
+    font-size: 25px;
+    float: left;
+}
+
+.orangeredBox {
+    width: 685px;
+    background-color: darkorange;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+}
+
+.userLoginText {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.userPassword {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+
+.passwordBox {
+    float: left;
+    padding: 0;
+    margin-left: 20px;
+}
+
+#loginUser, #password {
+
+    -webkit-box-shadow:
+            inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 10px rgba(0,0,0,0.1);
+    box-shadow:
+            inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 8px 0;
+
+}
+
+.userBox {
+    float: left;
+}
+
+.login {
+    font-weight: bolder;
+    font-size: 25px;
+    float: left;
+}
+
+
+
+.processResult {
+    float: right;
+}
+
+.rTableMachine {
+    float: right;
+    width: 200px;
+    height: 400px;
+    display: table-cell;
+    margin-top: -3em;
+
+}
+
+.rTableHeaders {
+    display: table-cell;
+    margin-top: 10px;
+    height: 30px;
+}
+
+.rTableRow {
+    display: table-row;
+}
+
+.rTableHead {
+    font-size: 14px;
+    margin-top: 100px;
+    display: table-cell;
+    padding: 5px 10px;
+    border: 1px solid #999999;
+}
+
+.rTableCell {
+    font-size: 12px;
+    font-weight: bold;
+    display: table-cell;
+    padding: 10px 5px;
+    border: 1px solid #999999;
+}
+
+.rTableHeadOverView {
+    font-size: 14px;
+    margin-top: 100px;
+    display: table-cell;
+    padding: 5px 10px;
+    border: 1px solid #999999;
+
+}
+.rTableCellOverView {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: table-cell;
+    padding: 10px 5px;
+    border: 1px solid #999999;
+}
+
+.onoffswitch {
+     float: left;
+     margin-left: 15px;
+     margin-top: 20px;
+     position: relative; width: 112px;
+     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+ }
+
+.onoffswitch_2 {
+    float: left;
+    margin-left: 15px;
+    margin-top: 70px;
+    position: relative; width: 112px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+       display: none;
+   }
+
+.onoffswitch-checkbox_2 {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+
+.onoffswitch-label_2 {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner_2 {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 25px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner_2:before, .onoffswitch-inner_2:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 25px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 11px;
+    background-color: #23EB15; color: #0A0909;
+}
+
+.onoffswitch-inner_2:before {
+    content: "ON";
+    padding-left: 11px;
+    background-color: #23EB15; color: #0A0909;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 11px;
+    background-color: #ED3709; color: #0A0303;
+    text-align: right;
+}
+
+.onoffswitch-inner_2:after {
+    content: "OFF";
+    padding-right: 11px;
+    background-color: #ED3709; color: #0A0303;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+     display: block; width: 27px; margin: 1px;
+     background: #FFFFFF;
+     position: absolute; top: 0; bottom: 0;
+     right: 78px;
+     border: 2px solid #999999; border-radius: 20px;
+     transition: all 0.3s ease-in 0s;
+ }
+
+.onoffswitch-switch_2 {
+    display: block; width: 27px; margin: 1px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 78px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox_2:checked + .onoffswitch-label_2 .onoffswitch-inner_2 {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0;
+}
+
+.onoffswitch-checkbox_2:checked + .onoffswitch-label_2 .onoffswitch-switch_2 {
+    right: 0;
+}
+
+.pauseProcessButton {
+    border: none;
+
+    position: fixed;
+    margin-top: -25px;
+    margin-left: 10px;
+}
+
+.inActiveButton {
+    opacity: .5;
+    pointer-events: none;
+}
+
+#container {
+    float: left;
+    width: 800px;
+    height: 400px;
+}

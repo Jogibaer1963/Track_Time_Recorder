@@ -1,0 +1,85 @@
+<template name="startRecorder">
+{{#if currentUser}}
+    <div>
+        <button type="button" class="buttonReturn " id="buttonReturn">Return to Main Page</button>
+    </div>
+ <div class="renderBox">
+    <h1>Machine in Process {{machineInProcess}}, location in {{locationInProcess}}</h1>
+    <button type="button" class="startProcessButton {{inActive_2}} {{inActive_3}} {{inActive_4}} {{inActive_5}}" id="startButton">Start Process</button>
+
+    <button type="button" class="stopProcessButton {{inActive}} {{inActive_3}} {{inActive_4}} {{inActive_5}}" id="stopButton">End Process</button>
+     <div class="onoffswitch {{inActive}} {{inActive_4}}">
+         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox " id="myonoffswitch" checked>
+         <label class="onoffswitch-label" for="myonoffswitch">
+             <span class="onoffswitch-inner "></span>
+         </label>
+     </div>
+     <br><br><br><br><br>
+    <div class="counterTime {{inActive}} {{inActive_4}}">
+        {{time}}
+    </div>
+    <br><br><br><br><br>
+    <button type="button" class="issueFoundButton {{inActive}} {{inActive_3}} {{inActive_4}} {{inActive_5}}" id="issueButton">Issue found</button>
+    <button type="button" class="issueSolvedButton {{inActive}} {{inActive_2}} {{inActive_3}} {{inActive_4}} " id="issueButton">Issue Solved</button>
+     <div class="onoffswitch_2 {{inActive}} {{inActive_2}} {{inActive_4}}">
+         <input type="checkbox" name="onoffswitch_2" class="onoffswitch-checkbox_2" id="myonoffswitch_2" checked>
+         <label class="onoffswitch-label_2" for="myonoffswitch_2">
+             <span class="onoffswitch-inner_2"></span>
+         </label>
+     </div>
+    <br><br><br><br><br><br><br>
+    <div class="counterTime_2 {{inActive}} {{inActive_2}} {{inActive_4}}">
+        {{time_2}}
+    </div>
+    <br><br><br><br><br><br><br>
+    {{> issueReasonTemplate}}
+ </div>
+    <br><br><br><br>
+{{else}}
+    {{> login}}
+{{/if}}
+</template>
+
+<template name="issueReasonTemplate">
+    <div class="{{inActive}} {{inActive_2}} {{inActive_4}}">
+        <button type="button"  class="issueReasonButton materialMovement" id="group1" name="materialMovement">Material Movement</button>
+        <button type="button"  class="issueReasonButton techError" id="group1" name="techError">Tech Error</button>
+        <button type="button"  class="issueReasonButton lackOfTool" id="group1" name="lackOfTool">Lack of Tool</button>
+        <button type="button"  class="issueReasonButton undefined" id="group1" name="lackOfTool">Undefined</button>
+        <br><br><br><br>
+        <button type="button" class="issueReasonButton commCol" id="group2" name="commCol">Communication COL</button>
+        <button type="button" class="issueReasonButton commCoa" id="group2" name="commCoa">Communication COA</button>
+        <button type="button" class="issueReasonButton commCse" id="group2" name="commCse">Communication CSE</button>
+        <br><br><br><br>
+        <button type="button"  class="issueReasonButton partFitment" id="group3" name="partFitment">Part Fitment</button>
+        <button type="button" class="issueReasonButton partDamaged" id="group3" name="partDamaged">Damaged Part</button>
+        <button type="button" class="issueReasonButton missStock" id="group3" name="missStock">Missing in Stock</button>
+        <button type="button" class="issueReasonButton missOutStock" id="group3" name="missOutStock">Missing out of Stock</button>
+    </div>
+</template>
+
+<template name="resultOfProcess">
+    <div>
+        <button type="button" class="buttonReturn " id="buttonReturn">Return to Main Page</button>
+    </div>
+    <br><br><br><br>
+   <div class="processResult">
+    <h1>Result of Process</h1>
+   {{#each machineOverview}}
+      <h3>Process Started at:</h3><h1>{{processStartString}}</h1> <h3>Machine Number :</h3><h1> {{machineId}} </h1><h3> located at</h3><h1>{{workCenter}}</h1>
+   {{/each}}
+    <br><br>
+        <div class="rTableMachine clearfix">
+            <div class="rTableRow">
+                <div class="rTableHeadOverView"><strong>Issue</strong></div>
+                <div class="rTableHeadOverView"><strong>Issue in min</strong></div>
+            </div>
+            {{#each result}}
+                <div class="rTableRow">
+                    <div class="rTableCellOverView">{{issueType}}</div>
+                    <div class="rTableCellOverView">{{issueDuration}}</div>
+                </div>
+            {{/each}}
+        </div>
+</div>
+</template>

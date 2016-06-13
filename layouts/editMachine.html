@@ -1,0 +1,104 @@
+<template name="editMachine">
+ {{#if currentUser}}
+    <a class="btn " href="/">Back to Over View</a>
+     <a class="btn " href="/editTime">Edit Marked Machine</a>
+       <h1>Summary</h1>
+        <div class="rTableRow">
+            <div class="rTableHeadOverView"><strong>Machine</strong></div>
+            <div class="rTableHeadOverView" style="width: 80px"><strong>Wait Time</strong></div>
+            <div class="rTableHeadOverView"><strong>Process in min</strong></div>
+            <div class="rTableHeadOverView"><strong>Issue Count</strong></div>
+            <div class="rTableHeadOverView"><strong>Non-Value Added Time</strong></div>
+        </div>
+     {{#each showMachine}}
+         <div class="rTableRow processMachine {{selectedClass}}">
+             <div class="rTableCellOverView">{{_id}}</div>
+             <div class="rTableCellOverView">{{waitTime}}</div>
+             <div class="rTableCellOverView">{{processDuration}}</div>
+             <div class="rTableCellOverView">{{issuesTotal}}</div>
+             <div class="rTableCellOverView">{{trueTime}}</div>
+         </div>
+     {{/each}}
+     <br><br><br>
+    {{> issueTemplate}}
+       {{else}}
+          {{> login}}
+       {{/if}}
+</template>
+
+
+<template name="issueTemplate">
+    <h3>Non-Value Added Issues</h3>
+    <div class="rTableRow">
+    </div>
+    {{#each showIssuesPerCenter}}
+        <div class="rTableCellOverView">{{machineId}}</div>
+        {{#each WorkCenters}}
+              {{#each Issues}}
+                <div class="rTableCellOverView">{{issueType}}</div>
+                <div class="rTableCellOverView tableTime">{{trueTime}}</div>
+            {{/each}}
+            <br>
+        {{/each}}
+    {{/each}}
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<template name="editMachineData">
+    {{#each showEditMachine}}
+        <div>
+            <form class="editDataSet">
+                <div>
+                    <label for="machineId" class="inputEdit">Machine Id</label>
+                    <input type="text" id="machineId" class="inputEdit" name="machineId" value="{{machineId}}" disabled>
+                </div>
+                <div>
+                    <label for="workCenter" class="inputEdit">Work Center</label>
+                    <input type="text" id="workCenter" class="inputEdit" name="workCenter" value="{{workCenter}}">
+                </div>
+                <div>
+                    <label for="processStartString" class="inputEdit">Start Time</label>
+                    <input type="text" id="processStartString" class="inputEdit" name="processStartString" value="{{processStartString}}">
+                </div>
+                <div>
+                    <label for="processDuration" class="inputEdit">Process Duration in min</label>
+                    <input type="text" id="processDuration" class="inputEdit" name="processDuration" value="{{processDuration}}">
+                </div>
+                <div>
+                    <label for="downTime" class="inputEdit">Down Time in min</label>
+                    <input type="text" id="downTime" class="inputEdit" name="downTime" value="{{downTime}}">
+                </div>
+                <div>
+                    <label for="issueCount" class="inputEdit">Counted Issues</label>
+                    <input type="text" id="issueCount" class="inputEdit" name="issueCount" value="{{issueCount}}" disabled>
+                </div>
+                <div class="editDataButton">
+                    <button type="submit" class="editDataButton" >Save new Data Set</button>
+                </div>
+            </form>
+        </div>
+    {{/each}}
+
+
+
+
+
+
+    <div class="buttonEdit">
+        <button type="button" class="editButton" >Edit selected</button>
+    </div>
+    {{> editMachineData}}
+
+
+</template>

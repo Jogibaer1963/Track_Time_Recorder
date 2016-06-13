@@ -1,0 +1,65 @@
+<template name="editTime">
+    <a class="btn " href="/">Back to Over View</a>
+    <br><br>
+    {{> machineTime}}
+
+</template>
+
+<template name="machineTime">
+
+  {{#each editMachineTime}}
+      <form class="timeEditPart_1">
+            <div class="">
+               <label for="MachineId" class="input" >Machine-Id</label>
+               <br>
+               <input type="text" class="" id="MachineId" name="newMachine" placeholder="Machine Id" value="{{_id}}" disabled>
+            </div>
+            <div class="">
+               <label for="MachineId" class="input" >Wait Time</label>
+               <br>
+               <input type="text" class="" id="MachineId" name="newWaitTime" placeholder="Wait Time" value="{{waitTime}}">
+            </div>
+            <div class="">
+              <label for="MachineId" class="input" >Process Duration</label>
+              <br>
+              <input type="text" class="" id="MachineId" name="newProcessDuration" placeholder="Process Duration" value="{{processDuration}}">
+            </div>
+            <div class="">
+              <label for="MachineId" class="input" >Issues</label>
+              <br>
+              <input type="text" class="" id="MachineId" name="newIssueCount" placeholder="Issues" value="{{issuesTotal}}">
+            </div>
+          <div class="">
+              <label for="MachineId" class="input" >Down Time</label>
+              <br>
+              <input type="text" class="" id="MachineId" name="newDownTime" placeholder="Down Time" value="{{issuesTotal}}">
+          </div>
+            <div class="">
+               <label for="MachineId" class="input" >Non Value Time</label>
+               <br>
+               <input type="text" class="" id="MachineId" name="newNoneValueTime" placeholder="None Value Time" value="{{trueTime}}">
+            </div>
+            <div class="userBox">
+               <button class="loginSubmit" type="submit">Submit</button>
+            </div>
+      </form>
+    {{/each}}
+    <br><br><br><br>
+    <div class="rTableRow">
+    </div>
+    {{#each editIssuesPerCenter}}
+        <div class="rTableCellOverView">{{machineId}}</div>
+        {{#each WorkCenters}}
+            {{#each Issues}}
+                <div class="rTableCellOverView">{{issueType}}</div>
+                <div class="rTableCellOverView tableTime">{{trueTime}}</div>
+            {{/each}}
+            <br>
+        {{/each}}
+    {{/each}}
+
+
+
+
+
+</template>
